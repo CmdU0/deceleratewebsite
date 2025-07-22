@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 50% 98%;
+    --foreground: 20 14% 21%;
+    --card: 40 50% 98%;
+    --card-foreground: 20 14% 21%;
+    --popover: 40 50% 98%;
+    --popover-foreground: 20 14% 21%;
+    --primary: 195 35% 35%;
+    --primary-foreground: 40 50% 98%;
+    --secondary: 20 25% 94%;
+    --secondary-foreground: 20 14% 21%;
+    --muted: 20 25% 94%;
+    --muted-foreground: 20 9% 45%;
+    --accent: 20 25% 94%;
+    --accent-foreground: 20 14% 21%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 40 50% 98%;
+    --border: 20 20% 88%;
+    --input: 20 20% 88%;
+    --ring: 195 45% 45%;
+    --radius: 0.5rem;
+    --sidebar-background: 20 30% 96%;
+    --sidebar-foreground: 20 14% 21%;
+    --sidebar-primary: 195 35% 35%;
+    --sidebar-primary-foreground: 40 50% 98%;
+    --sidebar-accent: 20 25% 92%;
+    --sidebar-accent-foreground: 20 14% 21%;
+    --sidebar-border: 20 20% 88%;
+    --sidebar-ring: 195 45% 45%;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 210 40% 98%;
+    --card: 0 0% 0%;
+    --card-foreground: 210 40% 98%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 240 5% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 240 5% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 240 5% 15%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 5% 20%;
+    --input: 240 5% 20%;
+    --ring: 210 40% 98%;
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 222.2 47.4% 11.2%;
+    --sidebar-accent: 240 5% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 240 5% 20%;
+    --sidebar-ring: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
