@@ -1,16 +1,14 @@
 import { Link } from "react-router-dom";
 import { latestPosts, Post } from "@/data/mock";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "./ui/button";
-import { ArrowRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 import ImageWithFallback from "./ImageWithFallback";
 import React from "react";
 
 const PostCard = ({ post }: { post: Post }) => (
-  <Link to={`/posts/${post.slug}`} className="group w-[300px] flex-shrink-0">
-    <Card className="overflow-hidden h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+  <Link to={`/posts/${post.slug}`} className="group w-[300px] md:w-[350px] flex-shrink-0">
+    <Card className="overflow-hidden h-full transition-all duration-300 shadow-soft hover:shadow-soft-lg hover:-translate-y-1 rounded-2xl">
       <CardHeader className="p-0">
         <div className="overflow-hidden aspect-video">
           <ImageWithFallback
@@ -20,19 +18,19 @@ const PostCard = ({ post }: { post: Post }) => (
           />
         </div>
       </CardHeader>
-      <div className="p-4">
+      <div className="p-5">
         <p className="text-xs uppercase tracking-wider text-muted-foreground">{post.category}</p>
-        <CardTitle className="text-md leading-snug mt-1">{post.title}</CardTitle>
+        <CardTitle className="text-lg leading-snug mt-1">{post.title}</CardTitle>
       </div>
     </Card>
   </Link>
 );
 
 const Scroller = ({ children, direction, speed }: { children: React.ReactNode, direction: 'left' | 'right', speed: 'normal' | 'fast' }) => (
-  <div className="overflow-hidden group" style={{ maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)' }}>
+  <div className="overflow-hidden group" style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}>
     <div
       className={cn(
-        "flex gap-4 py-4",
+        "flex gap-8 py-4",
         "min-w-full w-max",
         "group-hover:[animation-play-state:paused]",
         direction === 'left' && (speed === 'fast' ? 'animate-scroll-left-fast' : 'animate-scroll-left-normal'),
@@ -56,26 +54,24 @@ const ScrollingBlogs = () => {
 
   const row2 = (
     <>
-      {latestPosts.map((post) => <PostCard key={post.id} post={post} />)}
-      {latestPosts.map((post) => <PostCard key={`${post.id}-clone`} post={post} />)}
+      {[...latestPosts].reverse().map((post) => <PostCard key={post.id} post={post} />)}
+      {[...latestPosts].reverse().map((post) => <PostCard key={`${post.id}-clone`} post={post} />)}
     </>
   );
 
   return (
-    <section className="py-16 sm:py-24 bg-secondary/50 animate-fade-in-up [animation-delay:600ms]">
+    <section className="py-16 sm:py-24 bg-background animate-fade-in-up [animation-delay:600ms]">
       <div className="container mx-auto">
-        <div className="flex justify-between items-center mb-8 px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-serif">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             From the Blog
           </h2>
-          <Button asChild variant="secondary">
-            <Link to="/blog">
-              View All <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-          </Button>
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            A continuous stream of consciousness. Dive into our world of ideas.
+          </p>
         </div>
       </div>
-      <div className="space-y-4">
+      <div className="space-y-8">
         <Scroller direction="left" speed={isMobile ? 'fast' : 'normal'}>
           {row1}
         </Scroller>

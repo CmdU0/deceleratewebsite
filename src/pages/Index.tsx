@@ -1,8 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import LatestWriting from "@/components/LatestWriting";
-import Footer from "@/components/Footer";
+import FeaturedWriters from "@/components/FeaturedWriters";
 import ScrollingBlogs from "@/components/ScrollingBlogs";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -11,6 +12,7 @@ const Index = () => {
       <main className="flex-grow">
         <Hero />
         <LatestWriting />
+        <FeaturedWriters />
         <ScrollingBlogs />
       </main>
       <Footer />
