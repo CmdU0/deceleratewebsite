@@ -10,7 +10,7 @@ const FeaturedWriters = () => {
     <section className="py-16 sm:py-24 bg-secondary/30 animate-fade-in-up [animation-delay:400ms]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl tracking-tight sm:text-4xl">
             Featured Writers
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -24,7 +24,7 @@ const FeaturedWriters = () => {
                 <AvatarImage src={writer.imageUrl} alt={writer.name} />
                 <AvatarFallback>{writer.name.charAt(0)}</AvatarFallback>
               </Avatar>
-              <h3 className="text-xl font-bold">{writer.name}</h3>
+              <h3 className="text-xl font-serif font-bold">{writer.name}</h3>
               <p className="text-sm text-muted-foreground mt-2 flex-grow">{writer.bio}</p>
               <Button variant="link" asChild className="mt-6 text-primary font-semibold">
                 <Link to={`/writers/${writer.id}`}>View Profile</Link>

@@ -20,7 +20,7 @@ const PostCard = ({ post }: { post: Post }) => (
       </CardHeader>
       <div className="p-5">
         <p className="text-xs uppercase tracking-wider text-muted-foreground">{post.category}</p>
-        <CardTitle className="text-lg leading-snug mt-1">{post.title}</CardTitle>
+        <CardTitle className="text-lg font-serif leading-snug mt-1">{post.title}</CardTitle>
       </div>
     </Card>
   </Link>
@@ -63,7 +63,7 @@ const ScrollingBlogs = () => {
     <section className="py-16 sm:py-24 bg-background animate-fade-in-up [animation-delay:600ms]">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl tracking-tight sm:text-4xl">
             From the Blog
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">

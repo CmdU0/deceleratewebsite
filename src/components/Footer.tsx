@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
           <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="font-semibold text-foreground">Navigate</h3>
+              <h3 className="font-sans font-semibold text-foreground">Navigate</h3>
               <ul className="mt-4 space-y-3">
                 <li><Link to="/writers" className="text-sm text-muted-foreground hover:text-primary">Writers</Link></li>
                 <li><Link to="/anonymous" className="text-sm text-muted-foreground hover:text-primary">Anonymous</Link></li>
@@ -41,7 +41,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-foreground">Legal</h3>
+              <h3 className="font-sans font-semibold text-foreground">Legal</h3>
               <ul className="mt-4 space-y-3">
                 {legalLinks.map(link => (
                   <li key={link.name}><a href={link.href} className="text-sm text-muted-foreground hover:text-primary">{link.name}</a></li>
@@ -49,7 +49,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="md:col-span-2">
-              <h3 className="font-semibold text-foreground">Subscribe to our newsletter</h3>
+              <h3 className="font-sans font-semibold text-foreground">Subscribe to our newsletter</h3>
               <p className="text-sm text-muted-foreground mt-4">Get the latest posts and updates delivered to your inbox.</p>
               <form className="mt-4 flex gap-2">
                 <Input type="email" placeholder="Enter your email" className="flex-grow" />

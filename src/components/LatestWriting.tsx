@@ -15,7 +15,7 @@ const LatestWriting = () => {
     <section className="py-16 sm:py-24 bg-background animate-fade-in-up [animation-delay:200ms]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl tracking-tight sm:text-4xl">
             Latest Writing
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -37,7 +37,7 @@ const LatestWriting = () => {
                 </CardHeader>
                 <CardContent className="p-6 flex-grow">
                   <p className="text-sm text-primary font-semibold">{post.category}</p>
-                  <CardTitle className="text-xl leading-snug mt-2">
+                  <CardTitle className="text-xl font-serif leading-snug mt-2">
                     {post.title}
                   </CardTitle>
                 </CardContent>
