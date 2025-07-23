@@ -18,8 +18,8 @@ const Logo = ({ containerClassName }: LogoProps) => {
   };
 
   return (
-    <Link to="/" onClick={handleLogoClick} className={cn("text-2xl font-bold font-serif text-foreground hover:text-primary transition-colors", containerClassName)}>
-      Decelerate
+    <Link to="/" onClick={handleLogoClick} className={cn("flex items-center", containerClassName)}>
+      <img src="https://i.ibb.co/YFWz4Fz/1.png" alt="Decelerate Logo" className="h-8 w-auto" />
     </Link>
   );
 };
